@@ -1,0 +1,95 @@
+# ============================================================
+#  ΤΙ ΑΝΕΒΑΙΝΕΙ ΣΤΟ GITHUB — ΡΗΤΗ ΛΙΣΤΑ
+#
+#  Ανεβαίνουν ΑΚΡΙΒΩΣ 8 ΑΡΧΕΙΑ, τίποτε άλλο:
+#
+#    .gitignore                        αυτό εδώ το αρχείο
+#    README.md                         οδηγίες χρήσης του αποθετηρίου
+#    requirements.txt                  απαιτούμενα πακέτα Python
+#
+#    code/                             ΟΛΟΚΛΗΡΟΣ ο φάκελος (2 αρχεία):
+#      code/simpsons_rule.py             Simpson: απλός, σύνθετος,
+#                                        προσαρμοστικός, 2D
+#      code/quadrature_methods.py        Gauss (1D/2D), τραπέζιο,
+#                                        μεσοσημείο
+#
+#    test_methods.py                   11 δοκιμές ορθότητας
+#    verify_against_scipy.py           90 έλεγχοι έναντι SciPy
+#
+#    thesis/main.pdf                   Η ΕΡΓΑΣΙΑ (39 σελίδες).
+#                                      ΜΟΝΟ αυτό από τον φάκελο thesis/ —
+#                                      τα άλλα 38 αρχεία του μένουν τοπικά.
+#
+#  ------------------------------------------------------------
+#  ΤΙ ΜΕΝΕΙ ΤΟΠΙΚΑ (υπάρχει στον υπολογιστή, δεν ανεβαίνει):
+#
+#    thesis/*.tex, thesis/chapters/, thesis/vivliografia.bib
+#                                      οι πηγές που χτίζουν το PDF
+#    thesis/figures/, thesis/make_figures.py
+#                                      τα γραφήματα και ο κώδικάς τους
+#    thesis/build.ps1, thesis/pdf_preview.py
+#                                      βοηθητικά σενάρια
+#    thesis/odigos.tex, thesis/odigos.pdf
+#                                      ο προσωπικός οδηγός κατανόησης
+#    docs/                             διαδραστικά visualisations
+#    results/                          παλιές εικόνες δοκιμών
+#    .venv/, __pycache__/              περιβάλλον Python
+#    *.aux, *.log, *.toc, ...          ενδιάμεσα αρχεία LaTeX
+#
+#  ΠΡΟΣΟΧΗ: οι πηγές LaTeX υπάρχουν ΜΟΝΟ σε αυτόν τον υπολογιστή.
+#  Στο GitHub πάει μόνο το χτισμένο PDF. Κράτα αντίγραφο του φακέλου
+#  thesis/ αλλού (USB, Drive) μέχρι την παράδοση.
+#
+#  Έλεγχος ανά πάσα στιγμή:  git status --short
+#                            git check-ignore -v <αρχείο>
+# ============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# ---------- Πηγαία αρχεία της εργασίας (τοπικά μόνο) ----------
+thesis/*.tex
+thesis/chapters/
+thesis/*.bib
+thesis/figures/
+thesis/build.ps1
+thesis/make_figures.py
+thesis/pdf_preview.py
+results/
+
+# Ο οδηγός κατανόησης είναι προσωπικές σημειώσεις, δεν δημοσιεύεται
+thesis/odigos.pdf
+
+# ΕΞΑΙΡΕΣΗ: το τελικό PDF ανεβαίνει
+!thesis/main.pdf
+
+# ---------- Ενδιάμεσα αρχεία LaTeX ----------
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# ---------- Εικόνες ελέγχου του PDF ----------
+thesis/_preview/
+
+# ---------- Διαδραστικά visualisations (βοηθήματα κατανόησης) ----------
+# Δεν είναι παραδοτέα· δεν αναφέρονται πουθενά στην εργασία.
+docs/
+
+# ---------- Λειτουργικό σύστημα ----------
+Thumbs.db
+desktop.ini
+.DS_Store
